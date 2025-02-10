@@ -1,0 +1,108 @@
+body {
+    background: linear-gradient(135deg, #1A1A2E, #16213E);
+    color: white;
+}
+
+.bubble-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    flex-wrap: wrap;
+}
+
+.bubble {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(135deg, #4A90E2, #007AFF);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    animation: float 4s ease-in-out infinite;
+}
+
+.bubble:hover {
+    transform: scale(1.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#total {
+    width: 140px;
+    height: 140px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #FF3B30, #FF5E3A);
+    z-index: 10;
+}
+
+/* Orbiting positions */
+.bubble:nth-child(1) {
+    top: 30%;
+    left: 15%;
+}
+.bubble:nth-child(2) {
+    top: 10%;
+    left: 35%;
+    background: linear-gradient(135deg, #34C759, #32D74B);
+}
+
+.bubble:nth-child(3) {
+    top: 10%;
+    right: 35%;
+    background: linear-gradient(135deg, #FF9500, #FFCC00);
+}
+
+.bubble:nth-child(4) {
+    bottom: 10%;
+    left: 35%;
+    background: linear-gradient(135deg, #5856D6, #5E5CE6);
+}
+
+.bubble:nth-child(5) {
+    bottom: 10%;
+    right: 35%;
+    background: linear-gradient(135deg, #FF2D55, #FF3B30);
+}
+
+.bubble:nth-child(6) {
+    top: 50%;
+    left: 70%;
+    background: linear-gradient(135deg, #AC39FF, #D29BFF);
+}
+
+.bubble:nth-child(7) {
+    top: 40%;
+    right: 50%;
+    background: linear-gradient(135deg, #00AFFF, #00C9FF);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .bubble-container {
+        height: 400px;
+    }
+
+    .bubble {
+        width: 70px;
+        height: 70px;
+        font-size: 12px;
+    }
+
+    #total {
+        width: 110px;
+        height: 110px;
+        font-size: 16px;
+    }
+}
