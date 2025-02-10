@@ -1,7 +1,7 @@
 let aurora, edmonds, newWest, pacificSpirit, richmond, southCambie, totalRegistrations;
 async function fetchSheetData() {
     try {
-        const response = await fetch("http://localhost:5000/get-conf-data");
+        const response = await fetch("get-conf-data");
         const data = await response.json();
        // console.log("Registrations: ", data);
         //document.getElementById("output").innerText = JSON.stringify(data,null,2);
