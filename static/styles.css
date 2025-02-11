@@ -83,6 +83,12 @@ body {
 }
 
 .bubble:nth-child(7) {
+    top: 15%;
+    right: 20%;
+    background: linear-gradient(135deg, #e720d3, #b4870d);
+}
+
+.bubble:nth-child(8) {
     top: 40%;
     right: 50%;
     background: linear-gradient(135deg, #00AFFF, #00C9FF);
