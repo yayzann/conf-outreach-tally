@@ -1,11 +1,8 @@
 let aurora, edmonds, newWest, pacificSpirit, richmond, southCambie, totalRegistrations;
 async function fetchSheetData() {
     try {
-        const response = await fetch("get-conf-data");
-        const data = await response.json();
-       // console.log("Registrations: ", data);
-        //document.getElementById("output").innerText = JSON.stringify(data,null,2);
-    
+        const response = await fetch("https://conf-outreach-tally.onrender.com/get-conf-data");
+        const data = await response.json();    
         aurora = data.Aurora;
         edmonds = data.Edmonds;
         newWest = data["New West"];

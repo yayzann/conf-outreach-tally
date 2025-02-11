@@ -19,7 +19,7 @@ def get_conf_data():
         sheet_metadata = sheets_service.spreadsheets().get(spreadsheetId=SPREADSHEET_ID).execute()
         sheets_info = sheet_metadata.get("sheets",[])
         used_row_counts = {}
-        
+
         for sheet in sheets_info:
             sheet_name = sheet["properties"]["title"]
             
@@ -30,4 +30,5 @@ def get_conf_data():
     except Exception as e:
         return jsonify({"error":str(e)}),500
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render's dynamic port
+    app.run(debug=True, host="0.0.0.0", port=port)
