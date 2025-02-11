@@ -53,14 +53,14 @@ body {
     left: 15%;
 }
 .bubble:nth-child(2) {
-    top: 10%;
-    left: 35%;
+    top: 7%;
+    left: 10%;
     background: linear-gradient(135deg, #34C759, #32D74B);
 }
 
 .bubble:nth-child(3) {
     top: 10%;
-    right: 35%;
+    right: 30%;
     background: linear-gradient(135deg, #FF9500, #FFCC00);
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 .bubble:nth-child(5) {
-    bottom: 10%;
+    bottom: 20%;
     right: 35%;
     background: linear-gradient(135deg, #FF2D55, #FF3B30);
 }
@@ -83,7 +83,7 @@ body {
 }
 
 .bubble:nth-child(7) {
-    top: 15%;
+    top: 20%;
     right: 20%;
     background: linear-gradient(135deg, #e720d3, #b4870d);
 }
