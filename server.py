@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 CORS(app)
-SERVICE_ACCOUNT_FILE = "conference-tally-app-06d6b71fe066.json"
+SERVICE_ACCOUNT_FILE = "/etc/secrets/conference-tally-app-06d6b71fe066.json"
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 
 credentials = service_account.Credentials.from_service_account_file(
