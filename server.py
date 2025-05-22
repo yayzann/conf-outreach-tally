@@ -4,10 +4,10 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 import os
 
-app = Flask(__name__, template_folder="templates")  # Ensure Flask finds HTML files
+app = Flask(__name__, template_folder="templates") 
 CORS(app)
 
-SERVICE_ACCOUNT_FILE = "/etc/secrets/conference-tally-app-06d6b71fe066.json"  # Render's secret file path
+SERVICE_ACCOUNT_FILE = "/etc/secrets/conference-tally-app-06d6b71fe066.json"  
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 
 credentials = service_account.Credentials.from_service_account_file(
@@ -18,7 +18,7 @@ SPREADSHEET_ID = "1wGmhVHlPwMSY7kUUbfy2dUd9n9Am8HwgHjlReEm5Gzk"
 
 @app.route("/")
 def serve_tally():
-    return render_template("tally.html")  # Make sure tally.html is inside templates/
+    return render_template("tally.html")  ]
 
 @app.route("/get-conf-data", methods=["GET"])
 def get_conf_data():
@@ -38,5 +38,5 @@ def get_conf_data():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Render assigns a port
+    port = int(os.environ.get("PORT", 5000)) 
     app.run(debug=True, host="0.0.0.0", port=port)
