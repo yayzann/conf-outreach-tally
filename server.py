@@ -18,7 +18,7 @@ SPREADSHEET_ID = "1wGmhVHlPwMSY7kUUbfy2dUd9n9Am8HwgHjlReEm5Gzk"
 
 @app.route("/")
 def serve_tally():
-    return render_template("tally.html")  ]
+    return render_template("tally.html")
 
 @app.route("/get-conf-data", methods=["GET"])
 def get_conf_data():
